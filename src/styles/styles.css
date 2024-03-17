@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  background-image: url('../images/room.png');
+  background-size: cover; 
+  justify-content: center;
+  min-height: 100vh;
+  transition: background-color 0.3s;
+}
+
+.celebration-screen-body {
+  background-image: url('../images/black.jpeg'); /* Replace 'celebration_background.jpg' with your desired background image path */
+  background-size: cover;
+}
+
+/* styles.css */
+
+.celebrate-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ff69b4; /* Pink color, you can adjust as needed */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.celebrate-button:hover {
+  background-color: #ff1493; /* Darker pink color on hover, adjust as needed */
+}
+
+
+
+
+.image-container {
+  animation: fadeIn 1s forwards 5s; /* Adjust the delay (5s) as needed */
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.bulb-background {
+  /* Background image for the bulb screen */
+  background-image: url('../images/room.png'); /* Replace 'background.jpg' with your actual background image path */
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.text-font {
+  font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body.celebration-screen {
+  background-color: black;
+}
+
+.bulb-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow-x: auto;
+  margin-top: -50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.bulb {
+  width: 4vw;
+  height: 4vw;
+  margin: 1vw;
+  transition: transform 0.1s ease-in-out;
+}
+
+.bulb-image {
+  width: 350px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 20px auto; /* Center the image horizontally with a margin */
+}
+
+.music-container {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.music-icon {
+  width:80px; /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;
+}
+
+.bulb-container.show-button .button-container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bulb-container.show-button .button {
+  transform: translateY(0);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+}
+
+.button {
+  padding: 1vw 2vw;
+  font-size: 1.8vw;
+  background-color: #ffd700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ffa500;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0; /* Ensure it starts from the left edge */
+  width: 100%;
+  margin-top: 0; /* Remove any top margin */
+  padding-top: 0; /* Remove any top padding */
+}
+
+.banner-container .banner {
+  background-image: none; /* Remove the background image */
+  width: 100%;
+  height: auto;
+}
+
+
+.gift-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent; /* Set background color to transparent */
+}
+
+.banner-image, .balloon-image {
+  width: 100%;
+  height: auto;
+  background-color: transparent; /* Set background color to transparent */
+}
+
+.balloon-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.balloon {
+  position: absolute;
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  animation: riseUp 15s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes riseUp {
+  from {
+    bottom: -10%;
+    transform: scale(0);
+  }
+  to {
+    bottom: calc(100% - 30px); /* Stop when it's 30px from the top */
+    transform: scale(1);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    bottom: -100%; /* Start the text outside the screen */
+  }
+  100% {
+    bottom: 100%; /* Move the text to the top of the screen */
+  }
+}
+
+.scrolling-text {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveUp 70s linear forwards; /* Adjust animation duration as needed */
+}
+
+
+
+
+
+
+.iamgre-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -3%);
+  text-align: center;
+}
+
+.iamgre-image {
+  max-width: 450px;
+  height: 380px;
+}
+
+.single-balloon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flyTopBalloon 5s ease-in-out;
+  width: 100vw;
+  height: auto;
+}
+
+.typing-text {
+  font-family: 'Arial', sans-serif; /* Change to desired font family */
+  font-size: 40px; /* Adjust font size as needed */
+  color: #ffffff; /* Change text color if necessary */
+}
+
+@keyframes flyTopBalloon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100%);
+  }
+}
+.roaming-balloon {
+  position: absolute;
+  animation: roamBalloon 5s infinite;
+  margin-bottom: -37vh;
+  transform-origin: center bottom;
+}
+@keyframes roamBalloon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(calc(-50% + 20px)) translateY(-20px);
+  }
+  100% {
+    transform: translateX(calc(-30% + 40px));
+  }
+}
+.message-container {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 2vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  color: white;
+  font-size: 1.5vw;
+}
+
+.message-container.show-message {
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .bulb-container {
+    margin-top: -45vh;
+  }
+  .bulb {
+    width: 10vw;
+    height: 10vw;
+    margin: 3vw;
+  }
+  .banner-container {
+    bottom: 460px;
+  }
+  .banner {
+    width: 300px;
+    height: auto;
+  }
+  .button-container {
+    margin-top: 15vh;
+  }
+  .button {
+    padding: 10px 10px;
+    font-size: 3vw;
+  }
+  .single-balloon {
+    width: 300px;
+    height: 200px;
+  }
+  .roaming-balloon {
+    width: 30vw;
+    height: 30vw;
+    margin-bottom: -30vh;
+  }
+  .iamgre-container {
+    margin-bottom: -45vh;
+  }
+  .iamgre-image {
+    max-width: 80vw;
+    height: auto;
+  }
+  .message-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+  }
+}
